@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#26131c">
+  <meta name="description" content="Каталог детских и взрослых карнавальных костюмов, ростовых кукол и реквизита в Нижнем Новгороде.">
+  <title>Каталог костюмов — Карнавалиос</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">К содержанию</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Карнавалиос, главная"><span class="brand-mark" aria-hidden="true">✦</span>Карнавалиос</a>
+      <nav class="navigation" aria-label="Основная навигация">
+        <a href="catalogue.html" aria-current="page">Каталог</a>
+        <a href="index.html#rental">Условия проката</a>
+        <a href="index.html#contacts">Контакты</a>
+      </nav>
+      <a class="header-phone" href="tel:+79503510534">+7 (950) 351-05-34</a>
+    </div>
+  </header>
+  <main id="main">
+    <section class="shop wrap" aria-labelledby="shop-title">
+      <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Главная</a>
+      <div class="shop-heading">
+        <h1 id="shop-title">Каталог <em>костюмов</em></h1>
+        <p>Наряды для утренников, вечеринок и выступлений.</p>
+      </div>
+
+      <div class="shop-toolbar">
+        <div class="shop-filters" role="group" aria-label="Разделы каталога">
+          <button type="button" data-group="" aria-pressed="true">Все</button>
+          <button type="button" data-group="kids" aria-pressed="false">Детские</button>
+          <button type="button" data-group="adults" aria-pressed="false">Взрослые</button>
+          <button type="button" data-group="mascots" aria-pressed="false">Ростовые куклы</button>
+          <button type="button" data-group="props" aria-pressed="false">Реквизит</button>
+        </div>
+        <label class="shop-search">
+          <span class="search-icon" aria-hidden="true"></span>
+          <input type="search" id="search" aria-label="Поиск по каталогу" placeholder="Поиск по названию" autocomplete="off">
+        </label>
+      </div>
+      <p class="shop-count" id="results-count" role="status"></p>
+      <div class="product-grid" id="products">
+        <!-- products:start -->
+        <a class="product-card" data-group="kids" href="costumes/princess.html">
+          <div class="product-image"><img src="assets/costumes/princess.webp" alt="" width="820" height="1025"></div>
+          <div class="product-card-info">
+            <p class="product-category">Детские</p>
+            <h2>Принцесса «Королева звёзд»</h2>
+            <p class="product-bottom"><span>Прокат <strong>1 250 ₽</strong></span><span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+        <a class="product-card" data-group="adults" href="costumes/jester.html">
+          <div class="product-image"><img src="assets/costumes/jester.webp" alt="" width="820" height="1025"></div>
+          <div class="product-card-info">
+            <p class="product-category">Взрослые</p>
+            <h2>Скоморох</h2>
+            <p class="product-bottom"><span>Прокат <strong>2 000 ₽</strong></span><span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+        <a class="product-card" data-group="mascots" href="costumes/reindeer.html">
+          <div class="product-image"><img src="assets/costumes/reindeer.webp" alt="" width="820" height="1025"></div>
+          <div class="product-card-info">
+            <p class="product-category">Ростовые куклы</p>
+            <h2>Новогодний олень</h2>
+            <p class="product-bottom"><span>Прокат <strong>3 500 ₽</strong></span><span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+        <a class="product-card" data-group="kids" href="costumes/rabbit.html">
+          <div class="product-image"><img src="assets/costumes/rabbit.webp" alt="" width="820" height="1025"></div>
+          <div class="product-card-info">
+            <p class="product-category">Детские</p>
+            <h2>Зайка-хозяйка</h2>
+            <p class="product-bottom"><span>Прокат <strong>800 ₽</strong></span><span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+        <a class="product-card" data-group="adults" href="costumes/baba-yaga.html">
+          <div class="product-image"><img src="assets/costumes/baba-yaga.webp" alt="" width="820" height="1025" loading="lazy"></div>
+          <div class="product-card-info">
+            <p class="product-category">Взрослые</p>
+            <h2>Баба Яга Делюкс</h2>
+            <p class="product-bottom"><span>Прокат <strong>3 000 ₽</strong></span><span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+        <a class="product-card" data-group="kids" href="costumes/snowman.html">
+          <div class="product-image"><img src="assets/costumes/snowman.webp" alt="" width="820" height="1025" loading="lazy"></div>
+          <div class="product-card-info">
+            <p class="product-category">Детские</p>
+            <h2>Снеговик-почтовик</h2>
+            <p class="product-bottom"><span>Прокат <strong>1 500 ₽</strong></span><span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+        <a class="product-card" data-group="mascots" href="costumes/dragon.html">
+          <div class="product-image"><img src="assets/costumes/dragon.webp" alt="" width="820" height="1025" loading="lazy"></div>
+          <div class="product-card-info">
+            <p class="product-category">Ростовые куклы</p>
+            <h2>Змей Горыныч</h2>
+            <p class="product-bottom"><span>Прокат <strong>3 500 ₽</strong></span><span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+        <a class="product-card" data-group="kids" href="costumes/snow-maiden.html">
+          <div class="product-image"><img src="assets/costumes/snow-maiden.webp" alt="" width="820" height="1025" loading="lazy"></div>
+          <div class="product-card-info">
+            <p class="product-category">Детские</p>
+            <h2>Снегурочка</h2>
+            <p class="product-bottom"><span>Прокат <strong>1 500 ₽</strong></span><span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+        <a class="product-card" data-group="props" href="costumes/scroll.html">
+          <div class="product-image"><img src="assets/costumes/scroll.webp" alt="" width="820" height="1025" loading="lazy"></div>
+          <div class="product-card-info">
+            <p class="product-category">Реквизит</p>
+            <h2>Свиток для квестов</h2>
+            <p class="product-bottom"><span>Прокат <strong>500 ₽</strong></span><span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+        <a class="product-card" data-group="props" href="costumes/broom.html">
+          <div class="product-image"><img src="assets/costumes/broom.webp" alt="" width="820" height="1025" loading="lazy"></div>
+          <div class="product-card-info">
+            <p class="product-category">Реквизит</p>
+            <h2>Метла Бабы Яги</h2>
+            <p class="product-bottom"><span>Прокат <strong>1 000 ₽</strong></span><span aria-hidden="true">→</span></p>
+          </div>
+        </a>
+        <!-- products:end -->
+      </div>
+      <div class="empty" id="empty" hidden>
+        <p>По этому запросу ничего не нашлось.</p>
+        <button type="button" id="reset-filters" class="text-button">Показать все позиции</button>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">✦</span>Карнавалиос</a>
+      <nav aria-label="Информация о прокате">
+        <a href="index.html#rental">Условия проката</a>
+        <a href="index.html#contacts">Адрес и контакты</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
