@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#26131c">
+  <title>Корзина проката — Карнавалиос</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="rental-cart.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">К содержанию</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Карнавалиос, главная"><span class="brand-mark" aria-hidden="true">✦</span>Карнавалиос</a>
+      <nav class="navigation" aria-label="Основная навигация">
+        <a href="catalogue.html">Каталог</a>
+        <a href="index.html#rental">Условия проката</a>
+        <a href="index.html#contacts">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-cart" href="cart.html" aria-current="page">Корзина <span data-cart-count>0</span></a>
+        <a class="header-phone" href="tel:+79503510534">+7 (950) 351-05-34</a>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="shop wrap">
+    <a class="back-link" href="catalogue.html"><span aria-hidden="true">←</span> Каталог</a>
+    <div class="shop-heading">
+      <h1>Корзина <em>проката</em></h1>
+      <p>Один список костюмов и реквизита на весь праздник.</p>
+    </div>
+    <noscript><p class="cart-empty">Позвоните в прокат по номеру <a href="tel:+79503510534">+7 (950) 351-05-34</a>.</p></noscript>
+    <section class="cart-empty" id="cart-empty" hidden>
+      <h2>В корзине пока пусто</h2>
+      <p>Выберите костюмы и реквизит в каталоге.</p>
+      <a class="button button-dark" href="catalogue.html">Перейти в каталог</a>
+    </section>
+    <form class="cart-layout" id="rental-request" hidden>
+      <section class="cart-selection" aria-labelledby="selection-title">
+        <h2 id="selection-title">Ваш комплект</h2>
+        <ul class="cart-items" id="cart-items"></ul>
+        <a class="back-link" href="catalogue.html">Добавить костюм или реквизит <span aria-hidden="true">→</span></a>
+      </section>
+      <section class="request-panel" aria-labelledby="request-title">
+        <h2 id="request-title">Заявка на прокат</h2>
+        <div class="request-fields">
+          <label>Дата праздника <input name="date" type="date" required></label>
+          <label>Ваше имя <input name="name" type="text" autocomplete="name" maxlength="80"></label>
+          <label>Телефон <input name="phone" type="tel" autocomplete="tel" maxlength="25" placeholder="+7 900 000-00-00" required></label>
+          <label>Комментарий <textarea name="notes" rows="3" maxlength="350" placeholder="Например, когда хотите забрать костюмы"></textarea></label>
+        </div>
+        <p class="request-total"><span>Прокат по ценам каталога</span> <strong id="cart-total"></strong></p>
+        <p class="request-note">Наличие, итоговую стоимость и залог подтвердит менеджер.</p>
+        <button class="button button-dark" type="submit">Подготовить заявку</button>
+        <section class="request-draft" id="request-draft" aria-labelledby="draft-title" hidden>
+          <h3 id="draft-title" tabindex="-1">Заявка готова к отправке</h3>
+          <label>Текст заявки <textarea id="request-text" rows="7" readonly></textarea></label>
+          <div class="draft-actions">
+            <a class="button button-dark" id="request-email">Открыть письмо</a>
+            <button class="button button-outline" type="button" id="copy-request">Скопировать</button>
+          </div>
+          <p class="request-note">Письмо откроется в почтовом приложении. Отправьте его оттуда на prokat@карнавалиос.рф.</p>
+          <p class="request-note" id="copy-status" role="status"></p>
+        </section>
+      </section>
+    </form>
+    <template id="cart-row">
+      <li class="cart-row">
+        <a class="cart-image" tabindex="-1" aria-hidden="true"><img width="64" height="80" alt=""></a>
+        <div class="cart-row-main">
+          <a class="cart-item-name"></a>
+          <span class="cart-item-price"></span>
+        </div>
+        <label class="cart-size">Размер или рост
+          <input type="text" maxlength="42" placeholder="Например, 122 см">
+        </label>
+        <button class="cart-remove" type="button" aria-label="Удалить">×</button>
+      </li>
+    </template>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">✦</span>Карнавалиос</a>
+      <nav aria-label="Информация о прокате">
+        <a href="index.html#rental">Условия проката</a>
+        <a href="index.html#contacts">Адрес и контакты</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

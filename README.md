@@ -4,29 +4,12 @@
 
 На главной странице четыре плитки разделов. Страница `catalogue.html` показывает восемь костюмов и две позиции реквизита. Карточки в `costumes/` имеют собственные адреса. Цены перенесены из исходных разделов проката, ссылки указаны в карточках. Наличие, размеры, комплектацию и актуальные цены уточняет прокат.
 
-## Примерка по фото
+## Корзина проката
 
-Откройте карточку костюма и нажмите «Примерить». Для автоматической подгонки подойдёт фото одного человека в полный рост анфас. Положение можно изменить перетаскиванием или ползунками. Примерка показывает образ. Размер и комплектацию уточняет прокат.
-
-Автоподгонка использует [MediaPipe Pose Landmarker](https://developers.google.com/edge/mediapipe/solutions/vision/pose_landmarker/web_js). Пакет Tasks Vision 1.2.3 и [модель Pose Landmarker Lite](https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task) находятся в `assets/try-on/mediapipe/` и загружаются при первой примерке. Для автоподгонки откройте сайт через HTTP или HTTPS. При открытии HTML с диска доступна ручная подгонка.
-
-Фото декодируется и отрисовывается в памяти браузера, очищается при закрытии окна примерки и не отправляется на сервер. Политика страницы ограничивает сетевые запросы тем же доменом. Платный API и вычислительный сервер не требуются.
+Добавьте костюмы и реквизит из каталога или карточек. Состав корзины и размеры сохраняются в браузере. В корзине укажите дату праздника и телефон, затем подготовьте заявку. Её можно открыть как черновик письма на действующий адрес проката или скопировать. Менеджер подтверждает наличие, стоимость и залог.
 
 ## Иллюстрации
 Созданы встроенным ImageGen. Изображения в каталоге показывают концепт образа, фактический вид костюма уточняет прокат.
-
-Для примерки использованы восемь прозрачных изображений. Исходные иллюстрации переданы в ImageGen как изображения для редактирования. Общий промпт для всех восьми файлов:
-
-> Edit this product image into a realistic garment cutout for a browser virtual fitting tool. Retain the reference fabric, pattern, color, front-facing angle and silhouette. Fully isolate the garment, with genuinely transparent background alpha all the way to its detailed edges. No curtain, floor, cast shadow, stand, mannequin, human skin, backdrop, vignette, transparency grid drawn as pixels, pedestal, new text, or props. Center full garment with modest transparent margin on every edge and avoid truncation.
-
-- `assets/try-on/princess.webp` — Keep the blue velvet and gold embroidered gown from the shoulders down, including both puff sleeves and full hem. Remove the little crown. The neckline opening must be entirely transparent.
-- `assets/try-on/rabbit.webp` — Keep the sage gingham dress with the cream apron, lace and sleeve cuffs. Remove the rabbit bonnet and ears, retaining only the dress and tied collar. The neckline opening must be entirely transparent.
-- `assets/try-on/snowman.webp` — Keep the plush snowman jumpsuit with both legs and sleeves, red scarf, buttons and satchel. Remove the postman cap and all visible mannequin neck above the scarf. Make the upper opening transparent.
-- `assets/try-on/snow-maiden.webp` — Keep the ice-blue embroidered coat dress, its sleeves and white fur trim. Remove the kokoshnik, and remove the mannequin neck inside the collar. Upper collar opening is fully transparent.
-- `assets/try-on/jester.webp` — Keep the burgundy and golden jester tunic, belt, long sleeves and black trousers. Remove the jester hat and the cloth mannequin visible above and inside the collar. Neck opening and space between trouser legs are transparent.
-- `assets/try-on/baba-yaga.webp` — Keep the patchwork stage gown, apron, shawl and sleeves. Remove the headscarf and all mannequin surface at the neck. The neck opening must be fully transparent.
-- `assets/try-on/reindeer.webp` — Keep the complete reindeer mascot suit, including antlers, all head features, mittens and feet. Remove only the stage surroundings, floor and shadow.
-- `assets/try-on/dragon.webp` — Keep the complete three-headed dragon mascot suit including all three heads, plush wings, claws, feet and tail. Remove only the stage surroundings, floor and shadow.
 
 - `assets/costumes/princess.webp` — Portrait 4:5 image for a theatrical costume rental ecommerce product detail page. Realistic premium editorial studio photography of a rental item, finely rendered actual fabric textures, subtle draped theater backdrop, soft amber spotlight and restrained dark vignette. One single dominant subject in center, keep all its edges within central 85% with margin so it can also be cropped to 4:5. Full item from top to bottom including hem. Colorful but elegant, no people, no collages, no typography, no logos, no watermarks or text. Subject: A child-size fairytale Star Queen princess gown in sapphire-blue velvet, ankle length with ample skirt, embroidered small golden star motifs, graceful puff sleeves and a matching small gold diadem, displayed on a headless cloth dressmaker mannequin. Deep navy studio drapery.
 - `assets/costumes/rabbit.webp` — Portrait 4:5 image for a theatrical costume rental ecommerce product detail page. Realistic premium editorial studio photography of a rental item, finely rendered actual fabric textures, subtle draped theater backdrop, soft amber spotlight and restrained dark vignette. One single dominant subject in center, keep all its edges within central 85% with margin so it can also be cropped to 4:5. Full item from top to bottom including hem. Colorful but elegant, no people, no collages, no typography, no logos, no watermarks or text. Subject: A child-size storybook rabbit housekeeper costume, soft ivory rabbit ear bonnet over a pale moss-green gingham dress, pale cream apron with small pocket and scalloped edge, displayed on a headless cloth dressmaker mannequin. Muted warm olive studio drapery.

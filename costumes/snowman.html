@@ -4,12 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <meta http-equiv="Content-Security-Policy" content="connect-src 'self' blob:">
   <meta name="theme-color" content="#26131c">
   <meta name="description" content="Образ помощника Деда Мороза для детского новогоднего спектакля. Почтовая сумка на иллюстрации подчёркивает роль персонажа, который доставляет письма и приглашения.">
   <title>Снеговик-почтовик — Карнавалиос</title>
   <link rel="stylesheet" href="../style.css">
-  <script src="../try-on.js" defer></script>
+  <script src="../rental-cart.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">К содержанию</a>
@@ -21,7 +20,10 @@
         <a href="../index.html#rental">Условия проката</a>
         <a href="../index.html#contacts">Контакты</a>
       </nav>
-      <a class="header-phone" href="tel:+79503510534">+7 (950) 351-05-34</a>
+      <div class="header-actions">
+        <a class="header-cart" href="../cart.html">Корзина <span data-cart-count>0</span></a>
+        <a class="header-phone" href="tel:+79503510534">+7 (950) 351-05-34</a>
+      </div>
     </div>
   </header>
   <main id="main" class="product-page wrap">
@@ -49,17 +51,10 @@
           <div><dt>Размер и комплектация</dt><dd>Уточняются у проката</dd></div>
         </dl>
         <div class="product-actions">
-          <a class="button button-dark" href="tel:+79503510534">Уточнить наличие</a>
+          <button type="button" class="button button-dark" data-add-item="snowman">В корзину</button>
+          <a class="button button-outline" href="tel:+79503510534">Уточнить наличие</a>
           <a class="button button-outline" href="mailto:prokat@xn--80aaah5ahlmons.xn--p1ai?subject=%D0%A1%D0%BD%D0%B5%D0%B3%D0%BE%D0%B2%D0%B8%D0%BA-%D0%BF%D0%BE%D1%87%D1%82%D0%BE%D0%B2%D0%B8%D0%BA%20%E2%80%94%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%B2%20%D0%BF%D1%80%D0%BE%D0%BA%D0%B0%D1%82&amp;body=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D1%82%D1%8C%20%D0%BD%D0%B0%D0%BB%D0%B8%D1%87%D0%B8%D0%B5%20%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D0%B8%20%C2%AB%D0%A1%D0%BD%D0%B5%D0%B3%D0%BE%D0%B2%D0%B8%D0%BA-%D0%BF%D0%BE%D1%87%D1%82%D0%BE%D0%B2%D0%B8%D0%BA%C2%BB.%0A%0A%D0%94%D0%B0%D1%82%D0%B0%3A%20%0A%D0%A0%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%20%D0%B8%D0%BB%D0%B8%20%D1%80%D0%BE%D1%81%D1%82%3A%20">Написать в прокат</a>
         </div>
-        <section class="try-on" aria-labelledby="try-title">
-          <span class="try-icon" aria-hidden="true">✦</span>
-          <div>
-            <h2 id="try-title">Примерка по фото</h2>
-            <p>Посмотрите, как этот образ выглядит на вашем фото.</p>
-          </div>
-          <button type="button" class="button button-dark" data-try-on="snowman">Примерить</button>
-        </section>
         <a class="source-link" href="https://xn--80aaah5ahlmons.xn--p1ai/novogodnie-2/">Раздел на сайте проката</a>
       </div>
     </article>
