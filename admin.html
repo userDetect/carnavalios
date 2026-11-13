@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#25121d">
+  <title>Управление прокатом — Карнавалиос</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+  <script src="admin.js" defer></script>
+</head>
+<body class="admin">
+  <a class="skip" href="#main">К содержанию</a>
+  <aside class="admin-sidebar" aria-label="Разделы панели">
+    <a class="brand" href="admin.html"><span class="brand-mark" aria-hidden="true">✦</span>Карнавалиос</a>
+    <nav class="admin-nav" aria-label="Управление прокатом">
+      <button type="button" data-view="requests" aria-current="page"><span class="nav-glyph glyph-list" aria-hidden="true"></span>Заявки</button>
+      <button type="button" data-view="calendar"><span class="nav-glyph glyph-calendar" aria-hidden="true"></span>Календарь</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <a href="index.html">Открыть витрину <span aria-hidden="true">→</span></a>
+      <button type="button" id="reset-demo">Сбросить демо</button>
+    </div>
+  </aside>
+  <div class="admin-shell">
+    <header class="admin-topbar">
+      <p>Управление прокатом</p>
+      <span class="demo-label">Демо · тестовые данные</span>
+    </header>
+    <main id="main" class="admin-main">
+      <p class="admin-sr" id="announcement" role="status"></p>
+      <section id="requests" aria-labelledby="requests-title">
+        <div class="admin-heading">
+          <div>
+            <h1 id="requests-title">Заявки на прокат</h1>
+            <p>Костюмы и реквизит на один праздник в одной заявке.</p>
+          </div>
+          <span class="admin-today" id="today"></span>
+        </div>
+        <div class="admin-metrics" aria-label="Заявки по статусам">
+          <button class="metric" type="button" data-metric="new" aria-pressed="false">
+            <span>Новые заявки</span><strong>0</strong>
+          </button>
+          <button class="metric" type="button" data-metric="confirmed" aria-pressed="false">
+            <span>Подтверждены</span><strong>0</strong>
+          </button>
+          <button class="metric" type="button" data-metric="issued" aria-pressed="false">
+            <span>На руках</span><strong>0</strong>
+          </button>
+        </div>
+        <div class="admin-workspace">
+          <section class="admin-card queue" aria-labelledby="queue-title">
+            <header class="admin-card-head">
+              <h2 id="queue-title">Все заявки</h2>
+              <p id="queue-count" aria-live="polite"></p>
+            </header>
+            <div class="queue-filters">
+              <input id="request-search" type="search" placeholder="Имя, событие или номер" aria-label="Поиск заявок">
+              <select id="status-filter" aria-label="Статус заявки">
+                <option value="">Все статусы</option>
+                <option value="new">Новая</option>
+                <option value="confirmed">Подтверждена</option>
+                <option value="issued">Выдана</option>
+                <option value="returned">Возвращена</option>
+                <option value="cancelled">Отменена</option>
+              </select>
+            </div>
+            <div class="queue-list" id="request-list"></div>
+          </section>
+          <section class="admin-card order" id="request-detail" aria-label="Детали заявки"></section>
+        </div>
+      </section>
+      <section id="calendar" aria-labelledby="calendar-title" hidden>
+        <div class="admin-heading">
+          <div>
+            <h1 id="calendar-title">Календарь проката</h1>
+            <p>Подтверждённые брони, выдачи и возвраты по дням.</p>
+          </div>
+        </div>
+        <section class="admin-card calendar-card" aria-labelledby="week-title">
+          <header class="admin-card-head calendar-head">
+            <h2 id="week-title"></h2>
+            <div class="calendar-controls">
+              <button class="button button-outline" type="button" id="prev-week" aria-label="Предыдущая неделя">←</button>
+              <button class="button button-outline" type="button" id="current-week">Сегодня</button>
+              <button class="button button-outline" type="button" id="next-week" aria-label="Следующая неделя">→</button>
+            </div>
+          </header>
+          <div class="calendar-grid" id="calendar-days"></div>
+        </section>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
